@@ -2,7 +2,7 @@ workflows:
     react-native-android:
         name: React Native Android
         max_build_duration: 120
-        instance_type: mac_mini_m2
+        instance_type: linux_x2
         environment:
         #   android_signing:
         #     - codemagic_keystore
@@ -17,8 +17,7 @@ workflows:
             - $CM_BUILD_DIR/node_modules
         scripts:
             - name: Install npm dependencies
-              script: |
-                 
+              script: |         
                  npm install --legacy-peer-deps
                  npm uninstall @rnmapbox/maps
             - name: Set Android SDK location

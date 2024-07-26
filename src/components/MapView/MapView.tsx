@@ -1,6 +1,5 @@
-import {useFocusEffect, useNavigation} from '@react-navigation/native';
-import type {MapState} from '@rnmapbox/maps';
-import Mapbox, {MarkerView, setAccessToken} from '@rnmapbox/maps';
+// import {useFocusEffect, useNavigation} from '@react-navigation/native';
+// import type {MapState} from '@rnmapbox/maps';
 import {forwardRef, memo, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState} from 'react';
 import {View} from 'react-native';
 import {withOnyx} from 'react-native-onyx';
