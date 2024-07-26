@@ -166,7 +166,7 @@ android {
         }
         release {
             signingConfig signingConfigs.release
-            productFlavors.production.signingConfig signingConfigs.release
+            // productFlavors.production.signingConfig signingConfigs.release
             shrinkResources enableProguardInReleaseBuilds
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
