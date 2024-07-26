@@ -1,9 +1,8 @@
-
 workflows:
     react-native-android:
         name: React Native Android
         max_build_duration: 120
-        instance_type: linux_x2
+        instance_type: mac_mini_m2
         environment:
         #   android_signing:
         #     - codemagic_keystore
@@ -19,7 +18,9 @@ workflows:
         scripts:
             - name: Install npm dependencies
               script: |
+                 
                  npm install --legacy-peer-deps
+                 npm uninstall mapbox-gl
             - name: Set Android SDK location
               script: |
                 echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"            
